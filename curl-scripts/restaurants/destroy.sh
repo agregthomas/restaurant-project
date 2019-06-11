@@ -2,7 +2,7 @@
 
 curl "http://localhost:4741/restaurants/${ID}" \
   --include \
-  --request GET \
+  --request DELETE \
   --header "Content-Type: application/json" \
 
 echo
