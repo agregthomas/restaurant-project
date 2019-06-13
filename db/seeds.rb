@@ -1,22 +1,11 @@
 # frozen_string_literal: true
 
-# This file should contain all the record creation needed to seed the database
-# with its default values.
-# The data can then be loaded with the rails db:seed (or created alongside the
-# db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# https://gist.github.com/arjunvenkat/1115bc41bf395a162084
 require 'csv'
 
 csv_text = File.read(Rails.root.join('data', 'test2.csv'))
 
 data = CSV.parse(csv_text, headers: true)
-# do |row|
-#   puts row['scene']
-# end
 
 data.each do |row|
   r = Restaurant.new
